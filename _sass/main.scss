@@ -1,0 +1,9 @@
+---
+---
+@import 'vendor';
+
+.profile {
+  &--rounded {
+    border-radius: 100%;
+  }
+}

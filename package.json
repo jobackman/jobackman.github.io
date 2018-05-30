@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jobackman/jobackman.github.io#readme",
   "dependencies": {
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "font-awesome": "^4.7.0"
   }
 }
