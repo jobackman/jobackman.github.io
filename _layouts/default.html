@@ -10,11 +10,11 @@
         <div class="container">
 
           <div class="level">
-            <div class="level-item">
+            <div class="level-item animate--fade-down">
               <div class="media">
                 <div class="media-left">
                   <figure class="image is-96x96">
-                    <img src="http://www.gravatar.com/avatar/8a24b653e9dfee315febc22e4ecf4729?s=200">
+                    <img class="profile" src="{{ '/assets/image/profile.jpeg' | relative_url }}">
                   </figure>
                 </div>
                 <div class="media-content">
@@ -22,22 +22,22 @@
                   <p class="heading">Front-end developer / Engineer</p>
 
                   <div class="level is-mobile">
-                    <div class="level-item">
+                    <div class="level-item animate--fade-up animate--delay--2">
                       <a class="is-size-4 icon is-large has-text-light" href="mailto:{{ site.email }}">
                         <span class="fa fa-envelope"></span>
                       </a>
                     </div>
-                    <div class="level-item">
+                    <div class="level-item animate--fade-up animate--delay--3">
                       <a class="is-size-4 icon is-large has-text-light" href="https://github.com/{{ site.github_username }}">
                         <span class="fa fa-github"></span>
                       </a>
                     </div>
-                    <div class="level-item">
+                    <div class="level-item animate--fade-up animate--delay--4">
                       <a class="is-size-4 icon is-large has-text-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">
                         <span class="fa fa-linkedin"></span>
                       </a>
                     </div>
-                    <div class="level-item">
+                    <div class="level-item animate--fade-up animate--delay--5">
                       <a class="is-size-4 icon is-large has-text-info" href="https://twitter.com/{{ site.twitter_username }}/">
                         <span class="fa fa-twitter"></span>
                       </a>
@@ -56,7 +56,7 @@
 
         <div class="level">
           {% for project in site.data.projects %}
-            <div class="level-item">
+            <div class="level-item animate--fade animate--delay--{{forloop.index0 | plus: 5}}">
               <a class="heading" href="{{ project.url }}">
                 {{ project.name }}
               </a>
