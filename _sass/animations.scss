@@ -1,31 +1,17 @@
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
+$animation-base-duration: .25s;
+$animation-delay-base-duration: .25s;
+
+@import 'keyframes';
+
+@mixin animation-delay($multiplier) {
+  &--#{$multiplier} {
+    animation-delay: $multiplier * $animation-delay-base-duration;
   }
 }
 
-@keyframes fade-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+@mixin animation-duration($multiplier) {
+  &--#{$multiplier} {
+    animation-duration: $multiplier * $animation-base-duration;
   }
 }
 
@@ -34,51 +20,30 @@
   &--fade {
     opacity: 0;
     will-change: opacity;
-    animation: fade .5s forwards;
+    animation: fade $animation-base-duration forwards;
   }
 
   &--fade-up {
     opacity: 0;
     will-change: transform, opacity;
-    animation: fade-up .5s forwards;
+    animation: fade-up $animation-base-duration forwards;
   }
 
   &--fade-down {
     opacity: 0;
     will-change: transform, opacity;
-    animation: fade-down .5s forwards;
+    animation: fade-down $animation-base-duration forwards;
+  }
+
+  &--duration {
+    @for $i from 1 to 5 {
+      @include animation-duration($i);
+    }
   }
 
   &--delay {
-    &--1 {
-      animation-delay: .25s;
-    }
-    &--2 {
-      animation-delay: .5s;
-    }
-    &--3 {
-      animation-delay: .75s;
-    }
-    &--4 {
-      animation-delay: 1s;
-    }
-    &--5 {
-      animation-delay: 1.25s;
-    }
-    &--6 {
-      animation-delay: 1.5s;
-    }
-    &--7 {
-      animation-delay: 1.75s;
-    }
-    &--8 {
-      animation-delay: 2s;
-    }
-    &--9 {
-      animation-delay: 2.25s;
-    }
-    &--10 {
-      animation-delay: 2.5s;
+    @for $i from 1 to 14 {
+      @include animation-delay($i);
     }
   }
 }
