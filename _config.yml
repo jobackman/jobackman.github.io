@@ -27,8 +27,7 @@ linkedin_username: johanbackman90
 
 # Build settings
 markdown: kramdown
-sass:
-  sass_dir: _sass
+
 # theme: jekyll-sleek
 # theme: minima
 plugins:
@@ -45,3 +44,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - node_modules
+  - package.json
+  - yarn.lock

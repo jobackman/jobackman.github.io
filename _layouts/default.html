@@ -4,8 +4,7 @@
 {% include head.html %}
 
   <body>
-
-    <section class="hero is-fullheight is-bold is-dark">
+    <section class="hero is-fullheight section__background--radial">
       <div class="hero-body">
         <div class="container">
 
@@ -13,40 +12,40 @@
             <div class="level-item">
               <div class="media">
                 <div class="media-left">
-                  <figure class="image is-96x96 animate--fade animate--duration--2">
-                    <img class="profile" src="{{ '/assets/image/profile.jpeg' | relative_url }}">
+                  <figure class="image is-96x96 animate--fade animate--duration--4">
+                    <img class="profile__pic" src="{{ '/assets/image/profile.jpeg' | relative_url }}">
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="title animate--fade-down animate--duration--2">{{ site.name }}</p>
-                  <p class="heading animate--fade-down animate--duration--2 animate--delay--1">Front-end developer / Engineer</p>
+                  <p class="title has-text-light animate--fade-down animate--duration--2">{{ site.name }}</p>
+                  <p class="heading has-text-light animate--fade-down animate--duration--2 animate--delay--1">Front-end developer / Engineer</p>
 
                   <div class="level is-mobile">
                     <div class="level-item animate--fade-up animate--delay--2">
-                      <a class="is-size-4 icon is-large has-text-light" href="mailto:{{ site.email }}">
-                        <span class="fas fa-envelope"></span>
-                      </a>
-                    </div>
-                    <div class="level-item animate--fade-up animate--delay--3">
                       <a class="is-size-4 icon is-large has-text-light" href="https://github.com/{{ site.github_username }}">
                         <span class="fab fa-github"></span>
                       </a>
                     </div>
-                    <div class="level-item animate--fade-up animate--delay--4">
-                      <a class="is-size-4 icon is-large has-text-light" href="{{ '/assets/files/resume.pdf' | relative_url }}">
-                        <span class="fas fa-file-alt"></span>
-                      </a>
-                    </div>
-                    <div class="level-item animate--fade-up animate--delay--5">
+                    <div class="level-item animate--fade-up animate--delay--3">
                       <a class="is-size-4 icon is-large has-text-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">
                         <span class="fab fa-linkedin-in"></span>
                       </a>
                     </div>
-                    {% comment %} <div class="level-item animate--fade-up animate--delay--6">
+                    <div class="level-item animate--fade-up animate--delay--4">
+                      <a class="is-size-4 icon is-large has-text-success" href="{{ '/assets/files/resume.pdf' | relative_url }}">
+                        <span class="fas fa-file-alt"></span>
+                      </a>
+                    </div>
+                    <div class="level-item animate--fade-up animate--delay--5">
+                      <a class="is-size-4 icon is-large has-text-warning" href="mailto:{{ site.email }}">
+                        <span class="fas fa-envelope"></span>
+                      </a>
+                    </div>
+                    <!-- <div class="level-item animate--fade-up animate--delay--6">
                       <a class="is-size-4 icon is-large has-text-info" href="https://twitter.com/{{ site.twitter_username }}/">
                         <span class="fas fa-twitter"></span>
                       </a>
-                    </div> {% endcomment %}
+                    </div> -->
                   </div>
 
                 </div>
@@ -62,7 +61,7 @@
         <div class="level">
           {% for project in site.data.projects %}
             <div class="level-item animate--fade-up animate--duration--3 animate--delay--{{forloop.index0 | plus: 6}}">
-              <a class="heading" href="{{ project.url }}">
+              <a class="heading has-text-light" href="{{ project.url }}">
                 {{ project.name }}
               </a>
             </div>

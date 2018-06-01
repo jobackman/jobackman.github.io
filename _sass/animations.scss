@@ -1,8 +1,6 @@
 $animation-base-duration: .25s;
 $animation-delay-base-duration: .25s;
 
-@import 'keyframes';
-
 @mixin animation-delay($multiplier) {
   &--#{$multiplier} {
     animation-delay: $multiplier * $animation-delay-base-duration;
@@ -33,6 +31,12 @@ $animation-delay-base-duration: .25s;
     opacity: 0;
     will-change: transform, opacity;
     animation: fade-down $animation-base-duration forwards;
+  }
+
+  &--appear {
+    transform: scale(0);
+    will-change: scale;
+    animation: appear $animation-base-duration forwards;
   }
 
   &--duration {
