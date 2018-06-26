@@ -39,6 +39,14 @@ $animation-delay-base-duration: .25s;
     animation: appear $animation-base-duration forwards;
   }
 
+  &--radial-gradient {
+    background: repeating-radial-gradient(
+      circle at 0% 0%,
+      $background-color--light,
+      $background-color 75%
+    );
+  }
+
   &--duration {
     @for $i from 1 to 5 {
       @include animation-duration($i);
