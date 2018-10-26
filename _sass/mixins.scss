@@ -1,0 +1,7 @@
+@mixin radial-gradient-mixin($X, $Y) {
+  background: repeating-radial-gradient(
+    circle at $X $Y,
+    $background-color--light,
+    $background-color 75%
+  );
+}

@@ -40,11 +40,13 @@ $animation-delay-base-duration: .25s;
   }
 
   &--radial-gradient {
-    background: repeating-radial-gradient(
-      circle at 0% 0%,
-      $background-color--light,
-      $background-color 75%
-    );
+    will-change: background;
+    animation: radial-gradient $animation-base-duration*2 ease-out forwards;
+  }
+
+  &--background-gradient {
+    will-change: background;
+    animation: background-gradient $animation-base-duration*4 ease infinite;
   }
 
   &--duration {

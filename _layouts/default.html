@@ -4,7 +4,7 @@
 {% include head.html %}
 
   <body>
-    <section class="hero is-fullheight section__background--radial">
+    <section class="hero is-fullheight section__background--radial animate--radial-gradient">
       <div class="hero-body">
         <div class="container">
 
@@ -17,27 +17,27 @@
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="title has-text-light animate--fade-down animate--duration--2">{{ site.name }}</p>
-                  <p class="heading has-text-light animate--fade-down animate--duration--2 animate--delay--1">Front-end developer / Engineer</p>
+                  <p class="title has-text-light animate--fade-up animate--duration--2 animate--delay--1">{{ site.name }}</p>
+                  <p class="heading has-text-light animate--fade-down animate--duration--2 animate--delay--3">Front-end developer / Engineer</p>
 
-                  <div class="level is-mobile">
-                    <div class="level-item animate--fade-up animate--delay--2">
+                  <div class="level is-mobile animate--fade-down animate--duration--2 animate--delay--5">
+                    <div class="level-item">
                       <a class="is-size-4 icon is-large has-text-light" href="https://github.com/{{ site.github_username }}">
                         <span class="fab fa-github"></span>
                       </a>
                     </div>
-                    <div class="level-item animate--fade-up animate--delay--3">
-                      <a class="is-size-4 icon is-large has-text-success" href="mailto:{{ site.email }}">
+                    <div class="level-item">
+                      <a class="is-size-4 icon is-large has-text-light" href="mailto:{{ site.email }}">
                         <span class="fas fa-envelope"></span>
                       </a>
                     </div>
-                    <div class="level-item animate--fade-up animate--delay--4">
-                      <a class="is-size-4 icon is-large has-text-warning" href="{{ '/assets/files/resume.pdf' | relative_url }}">
+                    <div class="level-item">
+                      <a class="is-size-4 icon is-large has-text-light" href="{{ '/assets/files/resume.pdf' | relative_url }}">
                         <span class="fas fa-file-alt"></span>
                       </a>
                     </div>
-                    <div class="level-item animate--fade-up animate--delay--5">
-                      <a class="is-size-4 icon is-large has-text-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">
+                    <div class="level-item">
+                      <a class="is-size-4 icon is-large has-text-light" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">
                         <span class="fab fa-linkedin-in"></span>
                       </a>
                     </div>

@@ -11,13 +11,13 @@
     background: $background-color;
 
     &--radial {
-      background: $background-color;
-      background:
-        repeating-radial-gradient(
-          circle at -10% -30%,
-          $background-color--light,
-          $background-color 75%
-        );
+      background-color: $background-color;
+      @include radial-gradient-mixin(-15%, -30%);
+    }
+
+    &--gradient {
+      background: linear-gradient(270deg, $background-color--light, $background-color);
+      background-size: 400% 400%;
     }
   }
 }
